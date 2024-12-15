@@ -72,7 +72,7 @@ my $ = Data::StaticTable.new(
     rejected-data => %rejected-array-data
 ):data-has-header;
 diag "== Rejected data by row ==";
-diag %rejected-array-data.perl;
+diag %rejected-array-data.raku;
 ok(%rejected-array-data<3> ~~ (5).list, "For row 3 (considering a header), the value 5 was discarded");
 
 #-- For a hash, rejected data is recoverable in the way of an array
@@ -83,7 +83,7 @@ my $ = Data::StaticTable.new(
     rejected-data => @rejected-hash-data
 ):set-of-hashes;
 diag "== Rejected: rows that are not hashes ==";
-diag @rejected-hash-data.perl;
+diag @rejected-hash-data.raku;
 ok(@rejected-hash-data.elems == 1, "One row was rejected");
 ok(@rejected-hash-data[0] ~~ (10, 20), "Discarded data as expected");
 

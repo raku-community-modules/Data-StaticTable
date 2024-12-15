@@ -269,10 +269,10 @@ class StaticTable {
         @result
     }
 
-    multi method take(@rownums where .all ~~ Position) {
+    multi method take(@rownums where .all ~~ Data::StaticTable::Position) {
         self.new(@!header, self!gather-rowlist(@rownums))
     }
-    multi method take(*@rownums where .all ~~ Position) {
+    multi method take(*@rownums where .all ~~ Data::StaticTable::Position) {
         self.take(@rownums)
     }
 

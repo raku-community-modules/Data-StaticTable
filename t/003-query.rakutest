@@ -58,19 +58,19 @@ ok(
 
 diag "== Check different grep modes ==";
 my $rx = any(rx/ALPHA/, rx/0/);
-diag $q1.grep($rx, "Dim1"):n.perl;
+diag $q1.grep($rx, "Dim1"):n.raku;
 ok (($q1.grep($rx, "Dim1"):n) ~~ (4,5,6), "Expected rows");
 
-diag $q1.grep($rx, "Dim1"):r.perl;
+diag $q1.grep($rx, "Dim1"):r.raku;
 ok($q1.grep($rx, "Dim1"):r.elems == 3, "Expected 3 rows");
 
-diag $q1.grep($rx, "Dim1"):h.perl;
+diag $q1.grep($rx, "Dim1"):h.raku;
 ok($q1.grep($rx, "Dim1"):h.elems == 3, "Expected 3 rows");
 
-diag $q1.grep($rx, "Dim1"):nr.perl;
+diag $q1.grep($rx, "Dim1"):nr.raku;
 ok (($q1.grep($rx, "Dim1"):nr.keys) ~~ (4,5,6), "Expected rows indexes");
 
-diag $q1.grep($rx, "Dim1"):nh.perl;
+diag $q1.grep($rx, "Dim1"):nh.raku;
 ok (($q1.grep($rx, "Dim1"):nh.keys) ~~ (4,5,6), "Expected rows indexes");
 
 diag "== Create a new table from grep results of row numbers ==";

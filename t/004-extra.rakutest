@@ -11,15 +11,15 @@ my $t1 = Data::StaticTable.new(
 );
 diag $t1.display;
 diag "== Serialization and EVAL test ==";
-my $t1-copy = EVAL $t1.perl;
-diag $t1-copy.perl;
+my $t1-copy = EVAL $t1.raku;
+diag $t1-copy.raku;
 diag "== Comparison test ==";
 my $t1-clone = $t1.clone();
 my $t2 = Data::StaticTable.new(
   <A B C>,
   (1,2,3,4,5,6,7,0,9) # The 0 before the 9 is the only difference
 );
-ok($t1 eqv $t1-copy, "Comparison works (equal to EVALuated copy from 'perl' method)");
+ok($t1 eqv $t1-copy, "Comparison works (equal to EVALuated copy from 'raku' method)");
 ok($t1 eqv $t1-clone, "Comparison works (equal to clone)");
 ok(($t1 eqv $t2) == False, "Comparison works (distinct)");
 

@@ -121,8 +121,8 @@ my $t5 = Data::StaticTable.new(
 diag $t5.display;
 my %t5-iType = $t5.generate-index("Type");
 my %t5-iColor = $t5.generate-index("Color");
-diag "Index based on Type:  " ~ %t5-iType.perl;
-diag "Index based on Color: " ~ %t5-iColor.perl;
+diag "Index based on Type:  " ~ %t5-iType.raku;
+diag "Index based on Color: " ~ %t5-iColor.raku;
 ok(%t5-iType{'Car'} ~~ (1, 2), "Type 'Car' is in rows 1 and 2");
 ok(%t5-iColor{'white'} ~~ (1, 3), "Color 'white' is in rows 1 and 3");
 #-- Generate a StaticTable where there are only Type = 'Cars'
@@ -175,8 +175,8 @@ ok($t10[1]<Dim1> ~~ $t10.cell("Dim1", 1), "Equivalent ways to read the same cell
 
 diag "== Resulting StaticTable with only Dim2=5 ==";
 my %t10-iDim2 = $t10.generate-index("Dim2");
-diag %t10-iDim2{5}.perl;
-diag %t10-iDim2<5>.perl;
+diag %t10-iDim2{5}.raku;
+diag %t10-iDim2<5>.raku;
 my $t10-Dim2is5 = $t10.take(%t10-iDim2<5>);
 diag $t10-Dim2is5.display;
 ok($t10-Dim2is5.rows == 2, "Resulting table has 2 rows too");
