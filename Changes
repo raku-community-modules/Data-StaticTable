@@ -1,4 +1,6 @@
 Revision history for Data::StaticTable
 
 {{$NEXT}}
+
+0.1.1  2024-12-15T21:01:54+01:00
     - Initial version as a Raku Community module
