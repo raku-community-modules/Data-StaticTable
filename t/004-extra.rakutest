@@ -1,6 +1,8 @@
-use v6;
 use Test;
+
 use Data::StaticTable;
+
+plan 8;
 
 diag "== Extra features tests ==";
 my $t1 = Data::StaticTable.new(
@@ -47,4 +49,4 @@ my $t34 = $t3.take(@rowset3);
 my $t35 = $t3.take(3);
 ok($t34 eqv $t35, "'take' works correcly using Ints or Position types (list of 1 element)");
 
-done-testing;
+# vim: expandtab shiftwidth=4

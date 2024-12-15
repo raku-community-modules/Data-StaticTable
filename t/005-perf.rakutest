@@ -1,11 +1,13 @@
-use v6;
 use Test;
+
 use Data::StaticTable;
+
+plan 2;
 
 my Real $TIME;
 
-my $CSV1 = "t/fao-sample.csv";
-my $CSV2 = "t/FL_insurance_sample-UNIX.csv";
+my $CSV1 = $*PROGRAM.sibling("fao-sample.csv");
+my $CSV2 = $*PROGRAM.sibling("FL_insurance_sample-UNIX.csv");
 
 #------------------------------------------------------------------------------#
 
@@ -115,4 +117,4 @@ $ = $t2 eqv $t2-clone;
 $TIME = now - $TIME;
 diag "== Comparing 2 big equal StaticTables took : $TIME secs. ==";
 
-done-testing;
+# vim: expandtab shiftwidth=4

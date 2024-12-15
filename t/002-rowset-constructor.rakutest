@@ -1,6 +1,8 @@
-use v6;
 use Test;
+
 use Data::StaticTable;
+
+plan 19;
 
 diag "== Rowset constructor tests ==";
 
@@ -85,4 +87,4 @@ diag @rejected-hash-data.perl;
 ok(@rejected-hash-data.elems == 1, "One row was rejected");
 ok(@rejected-hash-data[0] ~~ (10, 20), "Discarded data as expected");
 
-done-testing;
+# vim: expandtab shiftwidth=4

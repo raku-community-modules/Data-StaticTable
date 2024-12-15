@@ -1,6 +1,8 @@
-use v6;
 use Test;
+
 use Data::StaticTable;
+
+plan 26;
 
 diag "== Testing indexes ==";
 my $t1 = Data::StaticTable.new(
@@ -95,4 +97,4 @@ throws-like
 X::Data::StaticTable,
 "Construction fails when specifiying a heading that does not exist";
 
-done-testing;
+# vim: expandtab shiftwidth=4

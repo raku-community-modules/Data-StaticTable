@@ -1,3 +1,2 @@
-.git/
-lib/.precomp
-
+.precomp/
+/Data-StaticTable-*

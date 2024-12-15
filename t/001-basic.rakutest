@@ -1,6 +1,8 @@
-use v6;
 use Test;
+
 use Data::StaticTable;
+
+plan 49;
 
 #===============================================================================
 diag "== Basic tests ==";
@@ -187,4 +189,4 @@ ok (@shape[3;1;1] eq 'BETA', "Shape spec works as expected (3 dimensions)");
 ok (@shape[3;1;2] == 3, "Shape spec works as expected (3 dimensions)");
 ok (@shape[1;2] == 5, "Shape spec works as expected (2 dimensions)");
 
-done-testing;
+# vim: expandtab shiftwidth=4

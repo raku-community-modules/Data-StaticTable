@@ -1,8 +1,4 @@
-use v6;
-use Test;
 use Data::StaticTable;
-
-ok(1==1, "Example code");
 
 # == Basic examples of use ==
 my $t1 = Data::StaticTable.new(
@@ -67,5 +63,4 @@ say $q3.grep(rx/Peru/, 'B'):n; # :n only get the number of the matching rows
 say $q3.grep(rx/Peru/, 'B'):r; # r: returns the array of the data, no headers
 # Displays [Paraguay Peru Quatar Rwanda Singapore]
 
-
-done-testing;
+# vim: expandtab shiftwidth=4
